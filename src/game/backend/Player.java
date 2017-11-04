@@ -1,4 +1,4 @@
-package src.game;
+package game.backend;
 
 import game.backend.*;
 import java.util.Collections;

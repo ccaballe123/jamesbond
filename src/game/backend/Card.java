@@ -1,3 +1,5 @@
+package game.frontend;
+
 public class Card{
 	
 //  0 spades
