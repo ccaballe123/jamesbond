@@ -87,4 +87,9 @@ public class Game {
 			_playerList.add(p);
 		}
 	}
+
+	public ArrayList<Player> getPlayerList() {
+		return _playerList;
+	}
+
 }
