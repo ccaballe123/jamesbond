@@ -31,11 +31,19 @@ public class Player {
 		return _hand.get(index);
 	}
 
+	public void setHand(ArrayList<Card[]> hand) {
+		_hand = hand;
+	}
+
+	public ArrayList<Card[]> getHand() {
+		return _hand;
+	}
+
 	public void getCard(Card in, Card out, Card[] set) {
 		Card[] activeCards = _game.getActiveCards();
 		activeCards[getIndex(set, in)] = out;
 		set[getIndex(set, out)] = in;
-		// _game.updateActiveCards(activeCards);
+		_game.updateActiveCards(activeCards);
 	}
 
 	public boolean handIsComplete() {
