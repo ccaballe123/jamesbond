@@ -1,5 +1,6 @@
 package game.backend;
 
+import game.backend.*;
 import java.util.Collections;
 import java.util.ArrayList;
 
@@ -19,6 +20,11 @@ public class Player {
 				return i;
 			}
 		}
+		return -1;
+	}
+
+	public setSet(int index, Card[] set) {
+		_hand.get(i) = set;
 	}
 
 	public void getCard(Card in, Card out, Card[] set) {
