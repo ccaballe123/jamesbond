@@ -23,8 +23,12 @@ public class Player {
 		return -1;
 	}
 
-	public setSet(int index, Card[] set) {
-		_hand.get(i) = set;
+	public void setSet(int index, Card[] set) {
+		_hand.set(index, set);
+	}
+
+	public Card[] getSet(int index) {
+		return _hand.get(index);
 	}
 
 	public void getCard(Card in, Card out, Card[] set) {
@@ -34,6 +38,22 @@ public class Player {
 		// _game.updateActiveCards(activeCards);
 	}
 
+	public boolean handIsComplete() {
+		for(int i = 0; i < _hand.size(); ++i) {
+			Card num = _hand.get(i)[0];
+			for(int j = 1; j < 4; ++j) {
+				if(_hand.get(i)[j] == num) continue;
+				else return false;
+			}
+		}
 
+		return true;
+	}
+
+	public void callJamesBond() {
+		if(handIsComplete()) {
+			// Call game over in game class
+		}
+	}
 
 }

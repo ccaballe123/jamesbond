@@ -7,8 +7,8 @@ public class Card{
 //	2 diamonds
 //	3 clubs
 	
-	private final int suite;
-	private final int num;
+	private final int _suite;
+	private final int _num;
 	
 	public Card(int number, int cardSuite){
 		if(number>13||number<0){
@@ -18,22 +18,18 @@ public class Card{
 			 throw new IllegalArgumentException("Illegal playing card suite");
 
 		}
-		
-		 suite = cardSuite;
-		 num = number;
-		 
-		
-		
+		_suite = cardSuite;
+		_num = number;
 	}
-	
 	
 	public int getSuite(){
-		return suite;
+		return _suite;
 	}
+
 	public String getSuitetoString(){
 		
        String suiteString = "";
-        switch (suite) {
+        switch (_suite) {
         case 0: suiteString ="Spade";
         	break;
         case 1: suiteString ="Heart";
@@ -42,14 +38,13 @@ public class Card{
         	break;
         case 3: suiteString ="Club";
         
-        
         }
         return suiteString;
 		
 	}
 	
 	public int getNumber(){
-		return num;
+		return _num;
 	}
 	
 }

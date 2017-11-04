@@ -50,7 +50,7 @@ public class Game {
 
 	}	
 	public void initializePlayer(){
-		ArrayList<Card[]>  sets= new ArrayList<Card[]>() ;
+		ArrayList<Card[]> sets = new ArrayList<Card[]>() ;
 		int size = TOTAL_CARDS - SIZE;
 		int pcards= size/2;
 		for(int j= 0;j<4;j++){
