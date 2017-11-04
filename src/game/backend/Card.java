@@ -1,4 +1,4 @@
-package game.frontend;
+package game.backend;
 
 public class Card{
 	
@@ -10,13 +10,11 @@ public class Card{
 	private final int suite;
 	private final int num;
 	
-	
-	
 	public Card(int number, int cardSuite){
-		if(number<13||number>0){
+		if(number>13||number<0){
 			 throw new IllegalArgumentException("Illegal playing card number");
 		}
-		if(cardSuite<4||cardSuite>0){
+		if(cardSuite>4||cardSuite<0){
 			 throw new IllegalArgumentException("Illegal playing card suite");
 
 		}
