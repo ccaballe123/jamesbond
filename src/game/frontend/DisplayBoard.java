@@ -22,7 +22,6 @@ public class DisplayBoard extends JFrame {
 	private JPanel midCards;
 
 	public DisplayBoard(){
-		gui();
 	}
 
 	public void gui(){
