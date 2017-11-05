@@ -43,7 +43,7 @@ public class Player {
 		Card[] activeCards = _game.getActiveCards();
 		activeCards[getIndex(set, in)] = out;
 		set[getIndex(set, out)] = in;
-		_game.updateActiveCards(activeCards);
+		_game.setActiveCards(activeCards);
 	}
 
 	public boolean handIsComplete() {

@@ -18,17 +18,22 @@ public class Game {
 		_numOfPlayers = numOfPlayers;
 		_deck = new Stack<Card>();
 		initializeDeck();
+		_playerList = new ArrayList<Player>();
 		initializePlayers(numOfPlayers);
 	}
 
 	public void initializeDeck() {
+		ArrayList<Card> temp = new ArrayList<Card>();
 		for(int i=0;i<13;i++){
 			for(int j=0;j<4;j++){
-				_deck.push(new Card(i,j));
+				temp.add(new Card(i,j));
 			}
 		}
-		if(_deck.size()!= TOTAL_CARDS)
-		Collections.shuffle(_deck);
+		Collections.shuffle(temp);
+
+		for(int i = 0; i < temp.size(); ++i) {
+			_deck.push(temp.get(i));
+		}
 	}
 
 	public void initializeActiveCards() {
@@ -74,7 +79,7 @@ public class Game {
 				for(int j = 0; j < 4; ++j) {
 					set[j] = _deck.pop();
 				}
-				hand.set(i, set);
+				hand.add(set);
 			}
 		}
 		p.setHand(hand);	
