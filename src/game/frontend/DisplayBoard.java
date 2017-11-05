@@ -5,7 +5,7 @@ import game.backend.*;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class DisplayBoard {
+public class DisplayBoard extends JFrame {
 
 	private JFrame board;
 
@@ -14,10 +14,12 @@ public class DisplayBoard {
 	private JPanel midCards;
 
 	public DisplayBoard(){
+		super("James Bond Card Game");
+		gui();
 		
 	}
 
-	private void gui(){
+	 public void gui(){
 		board = new JFrame();
 		board.setExtendedState(JFrame.MAXIMIZED_BOTH);
 		board.setUndecorated(true);
