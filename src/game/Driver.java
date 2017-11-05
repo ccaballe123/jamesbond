@@ -1,4 +1,5 @@
-package game.backend;
+package game;
+
 import game.frontend.DisplayBoard;
 
 public class Driver {
